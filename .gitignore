@@ -1,0 +1,72 @@
+# VSCODE SETTINGS
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.suo
+*.user
+*.userprefs
+*.pid
+*.log
+
+# ----------------------------------------------------------------------------
+
+# Python Backend Settings
+
+## Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+## Environment
+.env
+.venv
+env/
+venv/
+Backend/.env
+Backend/.venv
+
+## Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+## Jupyter Notebook
+.ipynb_checkpoints
+
+# ----------------------------------------------------------------------------
+
+# Frontend Settings
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+
+## Visual Studio / MonoDevelop
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pid
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+## Unity3D generated meta files
+/[Aa]ssets/[Aa]ssetStoreTools*
+
+# ----------------------------------------------------------------------------
+
+# Exceptions Rules
+# 無視したくない重要なファイルがあれば！で復活
+# !importtant_file.txt
