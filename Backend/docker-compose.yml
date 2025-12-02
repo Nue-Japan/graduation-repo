@@ -13,8 +13,8 @@ services:
       - DATABASE_URL=postgresql://myar_user:myar_password@db:5432/myar_db
       # ホットリロード設定
       - WATCHFILES_FORCE_POLLING=true
-      # ★Gemini APIキー (自分のキーに書き換えてください)
-      - GEMINI_API_KEY=your_gemini_api_key_here
+      # ★Gemini APIキー
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     depends_on:
       - db
