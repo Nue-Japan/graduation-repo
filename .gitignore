@@ -1,4 +1,6 @@
-# VSCODE SETTINGS
+# ----------------------------------------------------------------------------
+# OS / VSCode / General Settings
+# ----------------------------------------------------------------------------
 .DS_Store
 Thumbs.db
 Desktop.ini
@@ -11,9 +13,8 @@ Desktop.ini
 *.log
 
 # ----------------------------------------------------------------------------
-
 # Python Backend Settings
-
+# ----------------------------------------------------------------------------
 ## Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -26,6 +27,7 @@ env/
 venv/
 Backend/.env
 Backend/.venv
+Backend/postgres_data/
 
 ## Distribution / packaging
 build/
@@ -36,18 +38,19 @@ dist/
 .ipynb_checkpoints
 
 # ----------------------------------------------------------------------------
+# Frontend (Unity) Settings
+# ★重要: 先頭の「/」を外しています。これで Frontend_Unity フォルダ内も無視されます。
+# ----------------------------------------------------------------------------
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
 
-# Frontend Settings
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
-/[Mm]emoryCaptures/
-
-## Visual Studio / MonoDevelop
+## Visual Studio / MonoDevelop generated files
 *.csproj
 *.unityproj
 *.sln
@@ -63,10 +66,20 @@ dist/
 *.VC.db
 
 ## Unity3D generated meta files
+# Assetsフォルダ内の .meta は必要ですが、AssetStoreToolsなどの一時的なものは除外
 /[Aa]ssets/[Aa]ssetStoreTools*
 
-# ----------------------------------------------------------------------------
+## Android / AR Build generated files (重要)
+*.apk
+*.aab
+*.unitypackage
+.gradle/
 
+## Photon Fusion / Networking generated
+fusion-auth-token.txt
+
+# ----------------------------------------------------------------------------
 # Exceptions Rules
+# ----------------------------------------------------------------------------
 # 無視したくない重要なファイルがあれば！で復活
 # !importtant_file.txt
