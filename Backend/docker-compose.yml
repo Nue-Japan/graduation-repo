@@ -1,0 +1,39 @@
+services:
+  # --- 1. API Server (FastAPI) ---
+  api:
+    build: .
+    container_name: myar_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # 手元のコードをコンテナに同期 (ホットリロード用)
+      - ./:/code
+    environment:
+      # DB接続情報
+      - DATABASE_URL=postgresql://myar_user:myar_password@db:5432/myar_db
+      # ホットリロード設定
+      - WATCHFILES_FORCE_POLLING=true
+      # ★Gemini APIキー (自分のキーに書き換えてください)
+      - GEMINI_API_KEY=your_gemini_api_key_here
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - db
+
+  # --- 2. Database (PostgreSQL) ---
+  db:
+    image: postgres:15-alpine
+    container_name: myar_db
+    restart: always
+    ports:
+      - "5432:5432" # 必要ならホストからもDBツールで接続可能に
+    environment:
+      - POSTGRES_USER=myar_user
+      - POSTGRES_PASSWORD=myar_password
+      - POSTGRES_DB=myar_db
+    volumes:
+      # DBデータを永続化 (コンテナを消してもデータは残る)
+      - postgres_data:/var/lib/postgresql/data
+
+# データの保存場所定義
+volumes:
+  postgres_data:
