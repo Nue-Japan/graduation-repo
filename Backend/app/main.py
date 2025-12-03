@@ -1,5 +1,16 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.database import engine,Base
+from app.api import analysis
+
+from app.api import analysis
+from app.api import users
+
+from app.models import user as user_model
+
+from app.api import health
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Data-platform-backend-veta",version="1.0.0")
 
@@ -8,6 +19,7 @@ origins = [
     "http://localhost",
     "http://localhost:3000",
     "http://ar-dataplatform-veta.com",
+    "*"
 ]
 
 # Add CORS middleware
@@ -19,12 +31,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Websocket route
-# app.include_router(websocket_router, prefix="/ws",tags=["Websocket"])
-# app.include_router(api_router, prefix="/api",tags=["API"])
+# Include API routers
+app.include_router(analysis.router, prefix="/api/analysis", tags=["AI_analysis"])
+app.include_router(users.router, prefix="/api/users", tags=["users"])
+app.include_router(health.router, prefix="/api/system", tags=["health"])
 
 # Root endpoint
 @app.get("/")
 async def read_root():
-    return {"message": "backend is running"}
-
+    return {"message": "backend is running with Gemini AI!"}
