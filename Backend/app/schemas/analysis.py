@@ -10,4 +10,12 @@ class AnalysisRequest(BaseModel):
 # Response model for analysis results
 class AnalysisResponse(BaseModel):
     advice: str
-    key_points: List[str]   
+    key_points: List[str] 
+    title: str
+    summary: str
+    recommended_graph_type: str
+    data_points: List['DataPoint']
+    
+class DataPoint(BaseModel):
+    label: str
+    value: float

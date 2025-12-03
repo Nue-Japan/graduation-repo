@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Style src="DashboardStyle.uss" />
+    
+    <ui:VisualElement name="Container" class="panel-container">
+        
+        <ui:VisualElement name="Header" class="header">
+            <ui:Label name="TitleLabel" text="Loading Data..." class="title-text" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="Body" class="body">
+            <ui:Label text="Summary:" class="section-label" />
+            <ui:Label name="SummaryLabel" text="..." class="body-text" />
+            
+            <ui:VisualElement style="height: 20px;" /> <ui:Label text="AI Advice:" class="section-label ai-label" />
+            <ui:Label name="AdviceLabel" text="..." class="body-text ai-text" />
+        </ui:VisualElement>
+        
+    </ui:VisualElement>
+</ui:UXML>
