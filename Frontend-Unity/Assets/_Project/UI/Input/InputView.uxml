@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Style src="InputStyle.uss" />
+    
+    <ui:VisualElement name="InputContainer" class="input-container">
+        <ui:TextField name="AnalysisInput" multiline="true" class="input-field" value="ここに分析したいテキストを入力..." />
+        
+        <ui:Button name="SendButton" text="AI分析実行" class="send-button" />
+    </ui:VisualElement>
+</ui:UXML>

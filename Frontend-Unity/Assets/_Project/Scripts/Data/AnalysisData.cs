@@ -22,4 +22,9 @@ namespace MyARPlatform.Data
         
         public List<DataPoint> data_points;
     }
+    [Serializable]
+    public class AnalysisRequest
+    {
+        public string raw_text;
+    }
 }
