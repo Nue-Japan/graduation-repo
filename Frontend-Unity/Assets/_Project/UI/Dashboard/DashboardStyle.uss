@@ -1,44 +1,82 @@
-/* パネル全体の見た目（SFチックな磨りガラス風） */
+/* 全体のコンテナ：モダンなビジネス・グラスモーフィズム */
 .panel-container {
-    width: 600px;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 0.8); /* 半透明の黒 */
-    border-radius: 20px;
-    border-width: 2px;
-    border-color: rgba(0, 255, 255, 0.5); /* サイバーっぽい枠線 */
-    padding: 20px;
-    margin: auto; /* 画面中央寄せ */
+    width: 700px;
+    height: auto;
+    min-height: 450px;
+    /* 完全に黒ではなく、深いスレートグレーにして知的な印象に */
+    background-color: rgba(30, 35, 45, 0.95);
+    
+    /* 角丸は少し小さくしてシャープに */
+    border-radius: 8px;
+    
+    /* 枠線は細く、白の透明度で表現（光らせない） */
+    border-width: 1px;
+    background-color: rgba(30, 35, 45, 0.85);
+
+    /* 上部に微かなハイライトを入れてガラス感を出す */
+    border-top-color: rgba(255, 255, 255, 0.3);
+
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.9);
+
+    padding: 30px;
+    margin: auto;
 }
 
-/* タイトル文字 */
+/* ヘッダー部分 */
+.header {
+    margin-bottom: 25px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* タイトル文字：San Franciscoフォントのような清潔感 */
 .title-text {
-    font-size: 36px;
+    font-size: 32px;
     color: rgb(255, 255, 255);
     -unity-font-style: bold;
-    margin-bottom: 10px;
-    border-bottom-width: 1px;
-    border-bottom-color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
 }
 
-/* 小見出し */
+/* セクションラベル（Summary / Insight） */
 .section-label {
-    font-size: 18px;
-    color: rgb(150, 150, 150);
-    margin-bottom: 5px;
+    font-size: 14px;
+    /* 落ち着いたシルバーグレー */
+    color: rgb(160, 170, 180);
+    -unity-font-style: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* 本文 */
+/* 本文テキスト：読みやすさ重視 */
 .body-text {
-    font-size: 22px;
-    color: rgb(230, 230, 230);
-    white-space: normal; /* 折り返し有効 */
+    font-size: 20px;
+    color: rgb(240, 240, 240);
+    white-space: normal;
+    margin-bottom: 20px;
+    line-height: 32px;
 }
 
-/* AIアドバイス部分の強調 */
+/* AIアドバイス部分：アクセント */
 .ai-label {
-    color: rgb(255, 200, 0); /* 黄色 */
+    /* 警告色ではなく、知的な「青」または「落ち着いたゴールド」 */
+    color: rgb(100, 180, 255); 
+    border-top-width: 1px;
+    border-top-color: rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    margin-top: 10px;
 }
 
 .ai-text {
-    color: rgb(255, 255, 200);
+    color: rgb(255, 255, 255);
+    /* 背景を少し明るくしてエリアを分ける */
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    padding: 10px;
+    border-left-width: 3px;
+    border-left-color: rgb(100, 180, 255);
 }
