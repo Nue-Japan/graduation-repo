@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ec61a1c754a1d4295a9a86bff08e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseUrl: http://localhost:8000
+  _baseUrl: http://192.168.11.7:8000
   _visualizer: {fileID: 63770248}
   _dashboard: {fileID: 489668588}
   TestInputText: "2025\u5E74\u5EA6\u306E\u652F\u5E97\u5225\u58F2\u4E0A\u5831\u544A\u3002\u6771\u4EAC\u672C\u5E97\u306F\u58F2\u4E0A300\u5104\u5186\u3067\u7D76\u597D\u8ABF\u3002\u5927\u962A\u652F\u5E97\u306F150\u5104\u5186\u3001\u540D\u53E4\u5C4B\u652F\u5E97\u306F120\u5104\u5186\u3001\u798F\u5CA1\u652F\u5E97\u306F80\u5104\u5186\u3001\u672D\u5E4C\u652F\u5E97\u306F50\u5104\u5186\u3067\u3057\u305F\u3002"
